@@ -255,8 +255,8 @@ def main():
         return
 
     data.load_history()
-    data.make_plot(filename = op.join(root, loc.name + '.png')
-    data.make_plot(filename = op.join(root, loc.name + '_f.png', fahrenheit = True)
+    data.make_plot(filename = op.join(root, loc.name + '.png'))
+    data.make_plot(filename = op.join(root, loc.name + '_f.png'), fahrenheit = True)
 
 if __name__ == "__main__":
     main()
