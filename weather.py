@@ -34,7 +34,7 @@ class Location:
         self.history_dir = op.join(root, self.name, 'history')
         self.full_history_dir = op.join(root, self.name, 'history_full')
 
-    def request_data():
+    def request_data(self):
         response = requests.get(self.url, params = self.options)
         if response.status_code == requests.codes.ok:
             j = response.json()
@@ -255,8 +255,8 @@ def main():
         return
 
     data.load_history()
-    data.make_plot(filename = op.join(root, loc.name + '.png'))
-    data.make_plot(filename = op.join(root, loc.name + '_f.png'), fahrenheit = True)
+    data.make_plot(filename = op.join(root, loc.name, 'forecast.png'))
+    data.make_plot(filename = op.join(root, loc.name, 'forecast_f.png'), fahrenheit = True)
 
 if __name__ == "__main__":
     main()
