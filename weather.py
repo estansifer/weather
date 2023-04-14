@@ -246,7 +246,7 @@ class WeatherData:
 
             return intervals
 
-        r1 = intervals_above(0.3, 0.1)
+        r1 = intervals_above(0.05, 0.1)
         r2 = intervals_above(1, 0.1)
         r3 = intervals_above(2, 0.1)
         r4 = intervals_above(3, 0.1)
