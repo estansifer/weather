@@ -200,7 +200,7 @@ class WeatherData:
 
         ts = self.series['time']
         temp = self.series['temperature_2m']
-        rain_prob = self.series['precipitation_probability']
+        rain_prob = self.series['precipitation_probability'] / 100
         rain_rate = self.series['precipitation']
         day = to_day(ts)
 
